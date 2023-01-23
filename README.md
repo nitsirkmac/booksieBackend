@@ -9,7 +9,11 @@ Hanan Mohamed\
 Ashton Bowens\
 Ermiyas Hailemichael
 
-## USER STORIES
+## USER STORIE
+
+As a user, I can view my saved books as a list.\
+As a user, I can add books to my saved list.\
+As a user, I can view the information of a single book.\
 
 ## WIREFRAMES
 
@@ -24,10 +28,10 @@ express
 
 | Route | Renders | Component |
 | :---: | :-----: | :-------: |
-| / | home page |  |
-| /booksie | index page | Booklist |
-| /booksie/:id | show page | BookDisplay |
-
+| / | home page | Index  |
+| /booksie | Saved Books page | Booklist |
+| /booksie/:id | show page | Show |
+| /booksie/new | Add new book page | AddBook |
 
 
 ## GETTING STARTED

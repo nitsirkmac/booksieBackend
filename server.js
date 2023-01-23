@@ -101,6 +101,16 @@ app.post('/booksie' , async (req,res) => {
     }
 })
 
+// SHOW
+app.get('/booksie/:id', async (req, res) => {
+    try {
+        res.status(200).json(await Booksie.findById(
+            req.params.id))
+    } catch (error) {
+        res.status(400).json(error)
+    }
+})
+
 
 // LISTENER
 app.listen(PORT, () => console.log(`listening to the sound of ${PORT} pages turning`))
