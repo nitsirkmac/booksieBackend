@@ -7,6 +7,7 @@ const app = express()
 const mongoose = require("mongoose")
 const cors = require("cors")
 const morgan = require("morgan")
+const seed = require("./seed")
 
 // DATABASE CONNECTION
 mongoose.connect(DATABASE_URL)
@@ -40,6 +41,13 @@ app.use(express.urlencoded({extended: false}));
 app.get("/", (req, res) => {
     res.send("“A reader lives a thousand lives before he dies . . . The man who never reads lives only one.” - George R.R. Martin")
 })
+
+// SEED
+app.get('/seed', (req, res) => {
+    Booksie.create(seed, (err, data) => {
+      res.redirect('/booksie')
+    })
+  })
 
 // INDEX
 app.get('/booksie' , async (req,res) =>{
