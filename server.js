@@ -63,9 +63,7 @@ app.delete('/booksie/:id', async (req, res) => {
     try {
         res.status(200).json(await Booksie.findByIdAndRemove(
             req.params.id,
-            (foundBook) => {
-                res.redirect('/booksie')
-            }
+           
             ))
     } catch {
         res.status(400).json(error)
@@ -79,9 +77,7 @@ app.put('/booksie/:id', async (req, res) => {
             req.params.id,
             req.body,
             {new: true},
-            (updatedBook) => {
-                res.redirect(`/booksie/${req.params.id}`)
-            }
+            
         ))
     } catch (error) {
         res.status(400).json(error)
@@ -91,11 +87,10 @@ app.put('/booksie/:id', async (req, res) => {
 // CREATE
 app.post('/booksie' , async (req,res) => {
     try {
-        res.status(200).json(await Booksie.create(
-            req.body,
-            (createdBook) => {
-                res.redirect('/booksie')
-            }))
+        res.json(await Booksie.create(
+            req.body
+        
+            ))
     } catch (error) {
         res.status(400).json(error)
     }
