@@ -36,7 +36,10 @@ express
 
 ## GETTING STARTED
 
-netlify\
+heroku\
+https://booksiebackend.herokuapp.com/
+
+\
 trello:\
 https://trello.com/b/KjRJxh4O/mern-stack-app-project
 
