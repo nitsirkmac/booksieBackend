@@ -61,11 +61,10 @@ app.get('/booksie' , async (req,res) =>{
 // DELETE
 app.delete('/booksie/:id', async (req, res) => {
     try {
-        res.status(200).json(await Booksie.findByIdAndRemove(
-            req.params.id,
-           
+        res.status(200).json(await Booksie.findByIdAndDelete(
+            req.params.id, 
             ))
-    } catch {
+    } catch (error) {
         res.status(400).json(error)
     }
 })
