@@ -101,6 +101,17 @@ app.post('/booksie' , async (req,res) => {
     }
 })
 
+// EDIT
+app.get('/booksie/:id/edit', async (req, res) => {
+    try {
+        res.status(200).json(await Booksie.findById(
+            req.params.id,
+        ))
+    } catch (error) {
+        res.status(400).json(error)
+    }
+})
+
 // SHOW
 app.get('/booksie/:id', async (req, res) => {
     try {
@@ -110,6 +121,7 @@ app.get('/booksie/:id', async (req, res) => {
         res.status(400).json(error)
     }
 })
+
 
 
 // LISTENER
