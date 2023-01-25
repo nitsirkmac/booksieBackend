@@ -18,8 +18,9 @@ As a user, I can add books to my saved list.\
 As a user, I can view the information of a single book.
 
 ## WIREFRAMES
-
+ ![alt text]([[image.png](https://i.imgur.com/YrbgxQY.png)](https://i.imgur.com/kts2jQt.png)) 
 ## SCREEN SHOTS
+ ![alt text]([[image.png](https://i.imgur.com/YrbgxQY.png)](https://i.imgur.com/YrbgxQY.png)) 
 
 ## TECHNOLOGIES
 ReactJS \
